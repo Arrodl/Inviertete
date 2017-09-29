@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inviertete</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <header>
+    <!--Donde van a estar los botones de inicio de sesion y el dropdown-->
+    <div class="container-fluid">
+  	  <div class="row">
+  		    <div class="col-md-4">
+  		    </div>
+  		    <div class="col-md-2">
+            <img src=http://inviertete.net/wp-content/uploads/2016/01/cropped-inviertete-1000-288.jpg alt="Bootstrap Image Preview" />
+  		    </div>
+  		    <div class="col-md-4">
+  		    </div>
+  		    <div class="col-md-2">
+               <!--<ul> es para Unordered list-->
+               <ul class="buttongroup">
+                 <!--li es para los elementos de la lista-->
+                 <!--Para el boton de home-->
+                 <li class="buttonHome"></li>
+                 <!--Para el boton de chat -->
+                 <li class="buttonChat"></li>
+                 <!--Para el boton de notificaciones-->
+                 <li class="buttonNotification"></li>
+                 <!--Para el boton de login-->
+                 <li class="buttonLogin"></li>
+               </ul>
+  		    </div>
+      </div>
+    </div>
+
+    <nav>
+
+    </nav>
+
+
+
+
+
+
+
+
+    <!--This line is for the sign out button-->
+    <% if user_signed_in? %>
+  		<%= link_to "Cerrar sesión", destroy_user_session_path, method:'delete' %>
+  	<% end %>
+  </header>
+  <body>
+    <%= yield %>
+  </body>
+</html>
