@@ -18,6 +18,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
+
 img {
   width: 30px;
   height: 30px;
@@ -26,8 +28,5 @@ img {
 div.row {
   height: 70px;
   display: flex !important;
-}
-
-header {
-  background-color: #4F3EFF;
+  vertical-align: middle;
 }

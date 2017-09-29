@@ -18,9 +18,9 @@
   		    </div>
   		    <div class="col-md-4">
   		    </div>
-  		    <div class="col-md-2 container-fluid">
+  		    <div class="panel col-md-2 row">
                <!--<ul> es para Unordered list-->
-               <div class="row">
+               <div class="panel-body">
                   <!--li es para los elementos de la lista-->
                   <!--Para el boton de home-->
 
@@ -41,7 +41,7 @@
                   <div class="col-md-3">
                     <button class="btn-link">
                       <img class="img-circle avatar float-right mr-1" src="https://avatars2.githubusercontent.com/u/25804170?v=4&amp;s=40">
-                      
+
                     </button >
                   </div>
                   <!--Para el boton de login-->
@@ -50,12 +50,16 @@
                       <img class="img-circle avatar float-right mr-1" src="https://avatars2.githubusercontent.com/u/25804170?v=4&amp;s=40">
                     </button>
                     <ul class="dropdown-menu pull-right" role="menu">
-                      <li><a href="#">HTML</a></li>
+                      <li class="dropdown-header">
+                        <%= form_for(resource, as: resource_name, url:  session_path(resource_name)) do |f|%>
+                        
+                        <% end %>
+                      </li>
                       <li><a href="#">CSS</a></li>
                       <li><a href="#">JavaScript</a></li>
                     </ul>
                   </div>
-               </div>
+                  </div
   		    </div>
       </div>
     </div>
